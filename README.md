@@ -16,12 +16,11 @@ Clustering using [mean shift](http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_C
 To set parameters, open `src/meanshift.py`
 
     n_samples = 300 # sample size
-    n_centroids = 10 # number of centroids
-    n_updates = 30 # number of updates
+    n_centroids = n_samples # number of centroids
+    n_updates = 50 # number of updates
     window_radius = .1 # window radius for the Gaussian kernels
     n_gaussians = 3 # 'true' number of clusters
-    
-    
+       
 Execute
 
     python3 src/meanshift.py

@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import time
 
 n_samples = 300 # sample size
-n_centroids = 10 # number of centroids
-n_updates = 30 # number of updates
+n_centroids = n_samples # number of centroids
+n_updates = 50 # number of updates
 
 n_gaussians = 3 # 'true' number of clusters
 
@@ -66,7 +66,7 @@ def plot(X, C, sbs_C):
         plt.plot(ps[:, 0], ps[:, 1], colors[i] + '.')
 
     for i in range(sbs_C.shape[1]):
-        plt.plot(sbs_C[:, i, 0], sbs_C[:, i, 1], 'y')
+        plt.plot(sbs_C[:, i, 0], sbs_C[:, i, 1], 'y', linewidth=0.3)
 
     plt.plot(C[:, 0], C[:, 1], 'bo')
 
@@ -76,7 +76,8 @@ def plot(X, C, sbs_C):
 if __name__ == "__main__":
     X = create_data(n_samples, n_gaussians)
     stacked_X = np.vstack(X)
-    C = stacked_X[np.random.randint(stacked_X.shape[0], size=n_centroids), :]
+    # C = stacked_X[np.random.randint(stacked_X.shape[0], size=n_centroids), :]
+    C = stacked_X
     ms_C, sbs_ms_C = mean_shift(n_updates)
 
     sess = tf.Session()
