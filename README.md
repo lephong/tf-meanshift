@@ -17,7 +17,7 @@ To set parameters, open `src/meanshift.py`
 
     n_samples = 300 # sample size
     n_centroids = n_samples # number of centroids
-    n_updates = 50 # number of updates
+    n_updates = -1 # number of updates, -1 means run until converge (diff < 1e-5)
     window_radius = .1 # window radius for the Gaussian kernels
     n_gaussians = 3 # 'true' number of clusters
        
