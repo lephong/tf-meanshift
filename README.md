@@ -3,15 +3,15 @@ Mean-shift Clustering with Tensorflow
 
 Writen and maintained by Phong Le (p.le@uva.nl)
 
-###Description 
+### Description 
 Clustering using [mean shift](http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/TUZEL1/MeanShift.pdf) with Gaussian kernel. 
 
-###Requirements 
+### Requirements 
 
 + python 3.5
 + [tensorflow 0.12](https://www.tensorflow.org)
 
-###Run
+### Run
 
 To set parameters, open `src/meanshift.py`
 
